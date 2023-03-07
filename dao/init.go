@@ -12,7 +12,7 @@ import (
 var db *gorm.DB
 
 // 初始化数据库
-func init() {
+func InitDb() {
 	var err error
 	db, err = gorm.Open(sqlite.Open("./config/app.db"), &gorm.Config{})
 	if err != nil {
